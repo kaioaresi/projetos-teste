@@ -1,5 +1,5 @@
 docker-build:
-	sed 's/<PASSOWRD>/$(MYSQL_PASSWORD)/g' include/create_developer.template > include/create_developer.sql
+	sed 's/<PASSWORD>/$(MYSQL_PASSWORD)/g' include/create_developer.template > include/create_developer.sql
 
 	docker build . -t $(IMAGE)
 
